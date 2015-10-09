@@ -1,0 +1,23 @@
+int dreta =0;
+int rebot =2;
+void setup() {
+size(500,200);
+}
+
+void draw() {
+  dreta=dreta+rebot;
+  if(dreta>250){
+    dreta= dreta + rebot+2;}
+  if(dreta>500){
+  rebot=-2;
+  dreta = dreta +rebot; }
+  if(dreta<250){
+    dreta = dreta + rebot -2; }
+  if(dreta<0){
+  rebot=2;
+  dreta=dreta +rebot;}
+  
+  background(0);
+  fill(#00FFFD);
+  ellipse(dreta,100,50,50);
+ }
