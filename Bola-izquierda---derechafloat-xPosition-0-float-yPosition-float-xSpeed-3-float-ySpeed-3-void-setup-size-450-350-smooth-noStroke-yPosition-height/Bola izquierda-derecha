@@ -1,0 +1,27 @@
+float xPosition = 0;
+float yPosition;
+float xSpeed = 3;
+float ySpeed = 3;
+
+void setup(){
+size(450,350);
+smooth();
+noStroke();
+yPosition = height/2;
+}
+
+void draw(){
+background(0);
+
+if(xPosition<0){
+xSpeed = 3; 
+}
+
+if(xPosition>width){
+xSpeed = -6; 
+}
+
+fill(0,255,0);
+ellipse(xPosition,yPosition,80,80);
+xPosition += xSpeed; 
+}
